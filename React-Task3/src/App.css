@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+
+#cardsBody {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: lightgoldenrodyellow;
+  padding: 50px 0 50px 0;
+}
+
+#card {
+  width: 200px;
+  height: 250pxpx;
+  background-color: lightpink;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+
+#CardImg {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+#CardDesc {
+  padding: 5px;
+}
+
+#ProdBrand {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+#ProdName {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+#ProdPrice {
+  padding-top: 20px;
+  font-size: 0.8rem;
+}
+
+#ProdDesc{
+  padding-top: 4px;
+  font-size: 0.6rem;
+}
+#ProdDesc strong{
+  padding-top: 4px;
+  font-size: 0.7rem;
+}
+
+#ProdWaran{
+  padding-top: 5px;
+  font-size: 0.6rem;
+}
+
+#ProdWaran strong{
+  padding-top: 5px;
+  font-size: 0.7rem;
+}

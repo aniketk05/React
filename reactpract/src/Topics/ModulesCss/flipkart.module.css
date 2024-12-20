@@ -1,0 +1,20 @@
+#header{
+    height: 70px;
+    width: 100vw;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header>.navLogoSearch{
+    width: 50%;
+    height: 60px;
+    border: 1px solid blue;
+}
+
+#header > .navRight{
+    width: 40%;
+    height: 60px;
+    border: 1px solid green;
+}

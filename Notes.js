@@ -466,3 +466,18 @@ export let plane2 = "Cargo Plane";
 //! Types of css
 // 1.Inline css by using style={{}} object
 // 2.module css
+
+
+//! Life cycle of methods
+// life cycle are the methods thats tells about the lifecycle of any component
+// lifecycle methods divided into 4 categories 
+// 1.Mounting phase
+// 2.Upadating Phase
+// 3.Unmounting phase
+// lifecycle methods are defaultly available in class based component only
+// function based does not provide any default life cycle method .if we want to achieve lifecycle methods in functions based compnent we can take help hooks such as useEffect hook
+// Three phases od lifecycle methods represents unique life span of component 
+// like
+// -Mounting phase represent how the component is created and how to render it on UI 
+// -Updating phase will start if user perform any action/updation like clicking,hovering,form submition etc.
+// -UnMounting phase has only 1 method that is componentShouldUnMount-> this method returns a function in which we can stop or clear ongoing task is the current component.unMounting phase will occur if we/user navigate from one component to another component

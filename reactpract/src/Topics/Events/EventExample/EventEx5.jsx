@@ -1,52 +1,80 @@
 import React, { useState } from "react";
 
 function EventEx5() {
-  const [state, setState] = useState({
-    username: "",
-    password: "",
-  });
-  const [user,setUser]=useState([])
-
-  let handleChange=(e)=>{
+  const [state,setState]=useState({
+    username:"",
+    password:"",
+    id: Date.now(),
+    users:[]
+  })
+  let {username,password,id,users}=state
+  let handleChange = (e) => {
+      let {name,value}=e.target
+      setState({...state,[name]:value})
+  };
+  let handleSubmit=(e)=>{
+    e.preventDefault()
+    let tempObj={
+      username:state.username,
+      password:state.password,
+      id:state.id
+    }
     setState({
-      ...state,
-      [e.target.name]:e.target.value
+      username:"",
+      password:"",
+      id:Date.now(),
+      users:[...users,tempObj]
     })
     console.log(state)
   }
-  let handleSubmit=(e)=>{
-    e.preventDefault()
-    setUser({...state,user})
-    
-  }
-
   return (
-    <div className="h-screen justify-center items-center flex">
-      <fieldset className="border-[2px] rounded-lg border-black p-8">
-      <form action="" onSubmit={handleSubmit}>
+    <div>
+      <form
+        action=""
+        className="flex p-10 items-center justify-center flex-col  bg-stone-200 "
+        onSubmit={handleSubmit}
+      >
         <input
           onChange={handleChange}
-          placeholder="username"
+          type="text"
           name="username"
-          type="text"
-          className= "p-1 bg-slate-300 border-[1px] border-black rounded-md"
+          value={username}
+          placeholder="username"
+          className="border-[1px] border-[1px] rounded-md bg-slate-300 px-2 py-1 border-black"
+          required
         />
-        <br />
-        <br />
         <input
           onChange={handleChange}
-          name="password"
-          placeholder="password"
           type="text"
-          className="p-1 bg-slate-300 border-[1px] border-black rounded-md"
+          name="password"
+          value={password}
+          placeholder="password"
+          className="border-[1px] border-[1px] rounded-md bg-slate-300 px-2 py-1 m-3 border-black"
+          required
         />
-        <br />
-        <button className="bg-red-600 my-5 border-[1px] border-black rounded-md p-1 px-2">
-          Submit
+        <button className="bg-blue-400 rounded-md border-[1px] border-black text-white px-2 py-1  m-4">
+          Create
         </button>
       </form>
+      
+      <hr className="border-black" />
+      <br />
 
-      </fieldset>
+      <h1>Users</h1>
+
+      <div>
+        {users.length>0&& users.map((val,i)=>{
+          <table key={i}>
+            <tbody>
+              <tr>
+                <td>{val.id}</td>
+                <td>{val.username}</td>
+                <td>{val.password}</td>
+              </tr>
+            </tbody>
+          </table>
+        })}
+      </div>
     </div>
   );
 }

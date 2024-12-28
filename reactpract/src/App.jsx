@@ -7,6 +7,14 @@ import PropIntro from "./Topics/Props/PropIntro";
 import ModuleIntro from "./Topics/ModulesCss/ModuleIntro";
 import ConditionalRendering from "./Topics/ConditionRendering/ConditionalRendering";
 import EventsIntro from "./Topics/Events/EventsIntro";
+import UseEfffect from "./Topics/Hooks/UseEffect/UseEfffect";
+import AppContext from "./Topics/ContextApi/AppContext";
+import ContextApiIntro from "./Topics/ContextApi/ContextApiIntro";
+import Bidirectional from "./Topics/FluxArchitecture/Bidirectional";
+import UseRefIntro from "./Topics/Hooks/UseRef/UseRefIntro";
+import TaskIntro from "./Topics/Tasks/TaskIntro";
+
+
 
 export default function App() {
   return (
@@ -18,6 +26,12 @@ export default function App() {
       {/* //! Hooks  */}
       {/* //? useState  */}
       {/* <UseStateIntro/> */}
+      {/* //? useEffect  */}
+      {/* <UseEfffect/> */}
+      {/*//? Context Api  */}
+      {/* <ContextApiIntro/> */}
+      {/* //? useRef  */}
+      {/* <UseRefIntro/> */}
       {/*//!  Props  */}
       {/* <PropIntro/> */}
       {/* //! Css Module  */}
@@ -25,7 +39,12 @@ export default function App() {
       {/* //!Conditional Rendering  */}
       {/* <ConditionalRendering/> */}
       {/* //! Events  */}
-      <EventsIntro/>
+      {/* <EventsIntro/> */}
+      {/*//! BiDirectional  */}
+      {/* <Bidirectional/> */}
+
+      {/* Tasks  */}
+      <TaskIntro/>
     </div>
   );
 }

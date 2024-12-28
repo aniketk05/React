@@ -481,3 +481,104 @@ export let plane2 = "Cargo Plane";
 // -Mounting phase represent how the component is created and how to render it on UI 
 // -Updating phase will start if user perform any action/updation like clicking,hovering,form submition etc.
 // -UnMounting phase has only 1 method that is componentShouldUnMount-> this method returns a function in which we can stop or clear ongoing task is the current component.unMounting phase will occur if we/user navigate from one component to another component
+
+
+//? Mounting Phase
+// 1.Constructor 2.getDerivedStateFromProps() 3.render() 4.ComponentDidMount
+
+/// 1.Constructor
+// Constructor will execute first
+// Construtor will execute only once
+// constructor is best to initialize the variable and state becoz it execute only once so that same state or variable will not get reintialize again and again
+
+/// 2.GetDerivedStateFromProps()
+// it execute after the constructor 
+// this method is used to accept the props from the parent component and we can write javascript login inside getDerivedStateFromProps() 
+
+/// 3.render()
+// render method execute after getDerivedStateFromProps()
+// render method have return statement that return the jsx
+// render method is used to display the content/jsx on the UI
+
+/// 4.ComponentDidMount()
+// This method execute after the render method once jsx is rendered react can perform the heavy computation or calculations or we can say --side effects--
+// multiple side effects are fetching,network related operations,dom manipulation
+// If you are perfroming side effects in componentDidMount after render(), render can execute faster before this method which will help to enhance the user Experience
+// this method will execute only once
+
+
+//? Updating Phase
+// 1.getDerivedFromProps() ,2.shouldComponentUpdate() ,3.getSnapshotBeforeUpdate() , 5.render() ,4.ComponentDidUpdate()
+
+
+/// 1.getDerivedFromProps
+// this method is used to accept the props from the parent component and we can write javascript login inside getDerivedStateFromProps() 
+// it has information for current state as well as props that are send by parent element
+// this method can execute n number of time
+
+/// 2.shouldComponentUpdate()
+// has information about current state and previous state
+// if there are any changes in current state and previous state it return true otherwise it will return false
+// if method return true then only remaining methods of updating phase will get executed 
+
+/// 3.getSnapshotBeforeUpdate()
+// this method will execute only if should component update return true this method store the previous value of state with it and we can use it if required
+
+/// 4.render()
+// this method will render the updated state on UI
+
+
+/// 5. ComponentDidUpdate()
+// this method will check changes into the state and based on that it will handle the side effect
+
+//? UnMount Phase
+/// 1.ComponentWillUnamount
+// this method will be used to clear the ongoing task into current before navigating to component
+// i.e. if we have set ant interval into the current component we can clear that interval in this before we navigate to the another component
+
+
+//! Context Api
+// context api is use to avoid props drilling
+// here we have to create global context / store which will do two things for us 
+//?1st. It will store all the data that is required globally
+//?2nd.  It will provide that data throughtout the application
+//we to use context Api in 3 steps 
+//? 1st. create the context component
+// first we will store and export the object that is return by createContext method 
+//- export const context=createContext()
+// We will provide the data as a value to the props.children using ContextObject.Provider
+//- <context.Provider value={data}>{props.children}</context.Provider>
+//? 2nd. Connect AppContext with entire application
+// we want that context to be available throughout the application for this we have to wrap App.jsx call in between AppContext
+// ie. <AppContext><App/></AppContext>
+//? 3rd. How to use data Provided from by the context in any of the child component throughtout the application
+// to use data provided by the context we have to use hook called 
+// useContext hook will ask for an argument which should be context Object variable that is being exported from AppContext
+// Once we use useContext hook and pass the context object argument,useContext hook will return values provifr by the AppContext. 
+// and we can store the values and use it 
+
+
+//! useRef
+// useRef is one of the hook in react which can be used to target the eliment 
+// Ref also should be unique like id you should not use same ref for multiple element
+//  using to many useRef hook is not recommended becoz useRef hook skips the virtual dom and directly make changes into real dom 
+//  if we are using useRef hook in any component that component get converted from controled to uncontroled component 
+//  if our component is uncontroled component it can cause performance issue / it slow down the applicatio and there are chances if your using to may ref your application get crashed 
+// useRef hook we have to use 3 step
+// 1. declaration
+// we will use useRef() hook to declare the reference
+// i.e. - let heading=useRef()
+// 2. Apply the reference
+// the reference declared with use ref hook has to be used with element that we want to target using ref={} attribute
+// i.e. - <h1 ref={heading}>Hello</h1>
+// 3. Using declared Ref
+// we can use ref pass to the element throughout the component to modify the current element
+// in Heading ref reference/variable we get the information and access to current element 
+// i.e. - heading.current.style.background='red'
+// i.e. - clg(heading.current.textContent)
+
+
+
+
+
+//! Controled and uncontroled Component

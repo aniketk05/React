@@ -7,6 +7,7 @@ const Task6 = () => {
     email: "",
   });
   
+  
 
   let handleClick = () => {
     setStep(step + 1);
@@ -17,10 +18,11 @@ const Task6 = () => {
       {step === 1 && (
         <div>
           <input
+            name="username"
             type="text"
             placeholder="Enter Your Name"
             className="rounded-md border-[1px] border-black"
-            onChange={(e)=>setState({...state,username:e.target.value})}
+            onChange={(e)=>{setState({...state,username:e.target.value})}}
             value={state.username}
           />
           <button
@@ -37,7 +39,7 @@ const Task6 = () => {
             type="text"
             placeholder="Enter Your Email"
             className="rounded-md border-[1px] border-black"
-            onChange={(e)=>setState({...state,email:e.target.value})}
+            onChange={(e)=>{setState({...state,email:e.target.value})}}
             value={state.email}
           />
           <button

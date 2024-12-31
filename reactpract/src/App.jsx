@@ -13,6 +13,8 @@ import ContextApiIntro from "./Topics/ContextApi/ContextApiIntro";
 import Bidirectional from "./Topics/FluxArchitecture/Bidirectional";
 import UseRefIntro from "./Topics/Hooks/UseRef/UseRefIntro";
 import TaskIntro from "./Topics/Tasks/TaskIntro";
+import UseReducerIntro from "./Topics/Hooks/UseReducer/UseReducerIntro";
+import UseMemoIntro from "./Topics/Hooks/UseMemo/UseMemoIntro";
 
 
 
@@ -32,6 +34,11 @@ export default function App() {
       {/* <ContextApiIntro/> */}
       {/* //? useRef  */}
       {/* <UseRefIntro/> */}
+      {/* //? Use Reducer  */}
+      {/* <UseReducerIntro/> */}
+      {/*//? use Memo  */}
+      {/* <UseMemoIntro/> */}
+
       {/*//!  Props  */}
       {/* <PropIntro/> */}
       {/* //! Css Module  */}
@@ -44,7 +51,7 @@ export default function App() {
       {/* <Bidirectional/> */}
 
       {/* Tasks  */}
-      <TaskIntro/>
+      {/* <TaskIntro/> */}
     </div>
   );
 }

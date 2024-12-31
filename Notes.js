@@ -582,3 +582,19 @@ export let plane2 = "Cargo Plane";
 
 
 //! Controled and uncontroled Component
+
+//! useReducer Hook
+// use reducer hook is the alternative for useState hook for managing the states useReducer hook can help to manage complex state and logic better than useState hook
+// useReducer with with context api is the most commanly used pattern in react application 
+// syntax - const [state,dispatch]=useReducer(reducer,intialState)
+/// state-> state will hold the value passed to the intialState variable 
+/// dispatch-> dispatch is the function which is store in reference called reducer
+/// reducer-> reducer is the callback fuction which accepts 2 arguments that is state and action where in state parameter we get access to current state in action parameter we get the access of argument passed during dispatch function called the action can be any String,Number,or any datatype but most commonly it will be object which can have type and value properties 
+/// in reducer function usualy we write a switch case and in that swithc case the case will be action.type and based on that case (action.type) we will return the updated state object 
+// i.e. <button onClick={()=>{dispath({type:"add",value:10})}}>addition</button>
+
+
+//! Use Memo Hook
+// useMemo hook use to achieve performance optimization in react application useMemo hook will return memoizedvalue
+// syntax- const memoizedvalue=useMemo(()=>{},[dependency])
+// your callback function passed to the useMemo hook if has any expensive/heavy computation/calculation so it could affect the overall performance of application but as it used with the useMemo hook it won't called on each component re-render. it will get called only when there are some changes in dependency and it will return the memoized value 

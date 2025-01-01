@@ -13,6 +13,7 @@ const UseEffectEx1 = () => {
         }
         fetching()
     })
+    console.log("end")
     
   return (
     <div>

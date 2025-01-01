@@ -6,6 +6,7 @@ const UseEffectEx5 = () => {
 
     useEffect(()=>{
         setTotal(total+100)
+        console.log("The total in cart")
     },[cartItem])
     useEffect(()=>{
         console.log("we are checking your eligibility for delevery ")
@@ -14,7 +15,7 @@ const UseEffectEx5 = () => {
     <div>
         <h1>cart items : {cartItem}</h1>
         <h1>total : {total}</h1>
-        <button onClick={()=>{
+        <button className='bg-blue-500 rounded-md px-2 text-white' onClick={()=>{
             setCartItem(cartItem+1)
         }}>
             add to Cart

@@ -20,7 +20,7 @@ import UseMemoIntro from "./Topics/Hooks/UseMemo/UseMemoIntro";
 
 export default function App() {
   return (
-    <div>
+    <>
       {/* //! JSX  */}
       {/* <JsxIntro/> */}
       {/* //! TypesOfComponent  */}
@@ -29,7 +29,7 @@ export default function App() {
       {/* //? useState  */}
       {/* <UseStateIntro/> */}
       {/* //? useEffect  */}
-      {/* <UseEfffect/> */}
+      <UseEfffect/>
       {/*//? Context Api  */}
       {/* <ContextApiIntro/> */}
       {/* //? useRef  */}
@@ -52,6 +52,6 @@ export default function App() {
 
       {/* Tasks  */}
       {/* <TaskIntro/> */}
-    </div>
+    </>
   );
 }

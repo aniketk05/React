@@ -598,3 +598,13 @@ export let plane2 = "Cargo Plane";
 // useMemo hook use to achieve performance optimization in react application useMemo hook will return memoizedvalue
 // syntax- const memoizedvalue=useMemo(()=>{},[dependency])
 // your callback function passed to the useMemo hook if has any expensive/heavy computation/calculation so it could affect the overall performance of application but as it used with the useMemo hook it won't called on each component re-render. it will get called only when there are some changes in dependency and it will return the memoized value 
+
+
+
+//! HOC (higher Order Component)
+// hoc are the component that takes another passed as the argument i.e. react.memo
+// we can create our own HOC Component ex.Loader
+// 
+
+//! useCallback 
+

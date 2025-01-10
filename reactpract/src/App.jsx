@@ -1,5 +1,5 @@
 import React from "react";
-import './App.css'
+import "./App.css";
 import JsxIntro from "./Topics/JSX/JsxIntro";
 import TypesOfComponent from "./Topics/TypesOfComponent/TypesOfComponent";
 import UseStateIntro from "./Topics/Hooks/useStateHook/UseStateIntro";
@@ -15,8 +15,9 @@ import UseRefIntro from "./Topics/Hooks/UseRef/UseRefIntro";
 import TaskIntro from "./Topics/Tasks/TaskIntro";
 import UseReducerIntro from "./Topics/Hooks/UseReducer/UseReducerIntro";
 import UseMemoIntro from "./Topics/Hooks/UseMemo/UseMemoIntro";
-
-
+import HocIntro from "./Topics/HOC/HocIntro";
+import Crud from "./Topics/CRUD/Task/Crud";
+import AxiosIntro from "./Topics/Axios/AxiosIntro";
 
 export default function App() {
   return (
@@ -29,7 +30,7 @@ export default function App() {
       {/* //? useState  */}
       {/* <UseStateIntro/> */}
       {/* //? useEffect  */}
-      <UseEfffect/>
+      {/* <UseEfffect/> */}
       {/*//? Context Api  */}
       {/* <ContextApiIntro/> */}
       {/* //? useRef  */}
@@ -48,7 +49,18 @@ export default function App() {
       {/* //! Events  */}
       {/* <EventsIntro/> */}
       {/*//! BiDirectional  */}
-      {/* <Bidirectional/> */}
+      {/* <Bidirectional/>*/}
+      {/* <HocIntro/> */}
+      {/* //! Axios  */}
+      <AxiosIntro/>
+
+
+      {/* Crud Oprations  */}
+      {/* <Crud/> */}
+      {/* //?Crud Task  */}
+      {/* <Crud/> */}
+
+
 
       {/* Tasks  */}
       {/* <TaskIntro/> */}

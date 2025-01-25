@@ -4,10 +4,10 @@ import Task2 from './Task/Task2'
 import Task3 from './Task/Task3'
 import Task4 from './Task/Task4'
 import Task5 from './Task/Task5'
-import Task6 from './Task/Task6'
 import Task7 from './Task/Task7'
 import Task8 from './Task/Task8'
 import Task9 from './Task/Task9'
+import Task6 from './NewTasks/Task6'
 
 const TaskIntro = () => {
   return (
@@ -20,7 +20,11 @@ const TaskIntro = () => {
       {/* <Task6/> */}
       {/* <Task7/> */}
       {/* <Task8/> */}
-      <Task9/>
+      {/* <Task9/> */}
+
+
+      {/* other Tasks  */}
+      <Task6/>
       
     </div>
   )

@@ -18,6 +18,8 @@ import UseMemoIntro from "./Topics/Hooks/UseMemo/UseMemoIntro";
 import HocIntro from "./Topics/HOC/HocIntro";
 import Crud from "./Topics/CRUD/Task/Crud";
 import AxiosIntro from "./Topics/Axios/AxiosIntro";
+import Test from "./Topics/Testing/Test";
+import TaskOnAllTopics from "./Topics/Tasks/TasksOnAllTopics/TaskOnAllTopics";
 
 export default function App() {
   return (
@@ -52,7 +54,7 @@ export default function App() {
       {/* <Bidirectional/>*/}
       {/* <HocIntro/> */}
       {/* //! Axios  */}
-      <AxiosIntro/>
+      {/* <AxiosIntro/> */}
 
 
       {/* Crud Oprations  */}
@@ -64,6 +66,9 @@ export default function App() {
 
       {/* Tasks  */}
       {/* <TaskIntro/> */}
+      <TaskOnAllTopics/>
+      {/* <Test/> */}
+      
     </>
   );
 }

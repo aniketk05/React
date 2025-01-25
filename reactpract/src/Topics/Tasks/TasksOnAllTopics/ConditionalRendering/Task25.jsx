@@ -2,7 +2,7 @@ import React, { useState } from "react";
 const Task25 = ({theme}) => {
   const [theme, setTheme] = useState("light");
 
-  // Define themes with their corresponding styles
+  
   const themes = {
     light: {
       backgroundColor: "#ffffff",
